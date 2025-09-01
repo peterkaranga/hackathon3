@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Study Buddy – Flashcard Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Study Buddy</h1>
+            <p class="tagline">Generate interactive flashcards from your study notes using AI</p>
+        </header>
+
+        <div class="main-content">
+            <div class="input-section">
+                <h2>Enter Your Study Notes</h2>
+                <textarea id="study-notes" placeholder="Paste your study notes here... (e.g., The mitochondria are the powerhouse of the cell. Photosynthesis converts light energy to chemical energy...)"></textarea>
+                
+                <div class="form-group">
+                    <label for="card-count">Number of Flashcards to Generate:</label>
+                    <input type="number" id="card-count" min="1" max="10" value="5">
+                </div>
+                
+                <button id="generate-btn">Generate Flashcards</button>
+                
+                <div class="loading" id="loading">
+                    <p>Generating flashcards with AI...</p>
+                    <div class="spinner"></div>
+                </div>
+            </div>
+
+            <div class="flashcards-section">
+                <h2>Your Flashcards</h2>
+                <div class="flashcards-container" id="flashcards-container">
+                    <!-- Flashcards will be generated here -->
+                    <div class="placeholder-text">Your flashcards will appear here after generation</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h3>How to Use AI Study Buddy</h3>
+            <ol>
+                <li>Paste your study notes into the text area</li>
+                <li>Select how many flashcards you want to generate (1-10)</li>
+                <li>Click "Generate Flashcards" - our AI will create questions and answers</li>
+                <li>Click on any flashcard to flip it and see the answer</li>
+                <li>Study smarter, not harder!</li>
+            </ol>
+        </div>
+
+        <footer>
+            <p>AI Study Buddy – Flashcard Generator | Powered by Hugging Face AI</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
